@@ -1,1 +1,1 @@
-HI THERE VICTORIA SOOR!
+This is a current test bed to practice **HTML**, **CSS** and **java script** in the process of refining my uni application for computer science!
