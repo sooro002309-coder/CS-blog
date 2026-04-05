@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{background-color: cadetblue;}
+
+            h1 {font-family: Arial;
+                color: white;
+                text-align: center;}
+            
+            
+            p {
+                font-family: Arial;
+                color: white;
+                text-align: center;
+            }
+            
+            div {text-align: center;}
+            
+            .header{
+                border: 2px solid #ffffff;
+                border-radius: 25px;
+                padding: 60px;
+                text-align: center;
+                background: #770000;
+                color: white;
+                font-size: 30px;}
+        </style>
+
+        <title>OS CS Blog</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>CS Blog</h1>
+        </div>
+
+        
+
+        <!-- Your markdown will render here -->
+        <div id="blog-post"></div>
+
+            <script>
+                fetch('posts/post_1.md')
+                    .then(res => res.text())
+                    .then(text => {
+                        document.getElementById('blog-post').innerHTML = marked.parse(text);
+                    });
+        
+        </script>
+        
+    </body>
+</html>
